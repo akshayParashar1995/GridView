@@ -3,10 +3,14 @@ package com.example.gridview;
 import java.util.ArrayList;
 
 import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
 import android.widget.GridView;
 
 public class MainActivity extends ActionBarActivity {
@@ -15,7 +19,8 @@ public class MainActivity extends ActionBarActivity {
 	String[] gridItemNames={"Assignments","Self","Notifications","Calender"
 			,"Events","About Us"};
 	ArrayList<Item> list;
-
+	String[] classes={"Assignments","Self","Notifications","Calender","Events","AboutUs"};
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -57,14 +62,32 @@ public class MainActivity extends ActionBarActivity {
 			
 		}
 		gridViewList.setAdapter(new GridAdapter(this,0,0,list));
+		gridViewList.setOnItemClickListener(new OnItemClickListener(){
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				// TODO Auto-generated method stub
+				String open=classes[position];
+				try {
+					Class ourClass = Class.forName("com.example.gridview."+open);
+					Intent ourIntent=new Intent(MainActivity.this,ourClass);
+					startActivity(ourIntent);
+				} catch (ClassNotFoundException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				
+			}
+		});
+		
 	}
 
 	private void initialise() {
 		// TODO Auto-generated method stub
 		gridViewList=(GridView) findViewById(R.id.gvList);
 		list=new ArrayList<Item>();
-	
-		
 		
 	}
 
@@ -86,4 +109,5 @@ public class MainActivity extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
 }
