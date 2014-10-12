@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/simple_black"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="fill_parent"
+        android:padding="10dip"
+        android:layout_height="wrap_content"
+        android:text="Time Table For The Day"
+        android:textColor="#f8f8ff"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#191919"
+        android:gravity="center_horizontal"
+         >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+            <TextView 
+            android:id="@+id/tvOne" android:text="9-10"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>  
+        	<Button 
+            android:id="@+id/btOne" android:text="period 1"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/> 
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        	<TextView 
+            android:id="@+id/tvTwo" android:text="10-11"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>  
+        	<Button 
+            android:id="@+id/btTwo" android:text="period 2"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        	<TextView 
+            android:id="@+id/tvThree" android:text="11-12"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>  
+        	<Button 
+            android:id="@+id/btThree" android:text="period 3"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        	<TextView 
+            android:id="@+id/tvFour" android:text="12-1"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>  
+        	<Button 
+            android:id="@+id/btFour" android:text="period 4"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        	<TextView 
+            android:id="@+id/tvFive" android:text="1-2"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>  
+        	<Button 
+            android:id="@+id/btFive" android:text="period 5"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        	<TextView 
+            android:id="@+id/tvSix" android:text="2-3"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>  
+        	<Button 
+            android:id="@+id/btSix" android:text="period 6"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        	<TextView 
+            android:id="@+id/tvSeven" android:text="3-4"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>  
+        	<Button 
+            android:id="@+id/btSeven" android:text="period 7"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal" >
+        <TextView 
+            android:id="@+id/tvEight" android:text="4-5"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>  
+        	<Button 
+            android:id="@+id/btEight" android:text="period 8"
+            android:layout_weight="1" 
+            android:textColor="#f8f8ff"
+            android:padding="20dip" android:gravity="center"/>
+        </TableRow>
+        
+    </TableLayout>
+
+</LinearLayout>
