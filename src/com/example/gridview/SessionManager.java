@@ -15,7 +15,7 @@ public class SessionManager extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
-		pref=getSharedPreferences("User Details",Context.MODE_PRIVATE);
+		pref=getSharedPreferences("User_Details",Context.MODE_PRIVATE);
 		isFirst=pref.getBoolean("Is First",true);
 		
 		if(isFirst)
