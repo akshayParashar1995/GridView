@@ -16,10 +16,10 @@ import android.widget.GridView;
 public class MainActivity extends ActionBarActivity {
 	
 	GridView gridViewList;
-	String[] gridItemNames={"Assignments","Self","Notifications","Calender"
+	String[] gridItemNames={"Assignment","Self","Notifications","Calender"
 			,"Events","About Us"};
-	ArrayList<Item> list;
-	String[] classes={"Assignments","Self","Notifications","Calender","Events","AboutUs"};
+	ArrayList<GridViewItem> list;
+	String[] classes={"Assignment","Self","Notifications","Calender","Events","AboutUs"};
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -29,34 +29,34 @@ public class MainActivity extends ActionBarActivity {
 		
 		for(String s: gridItemNames)
 		{
-			if(s.equals("Assignments"))
+			if(s.equals("Assignment"))
 			{
-				Item item=new Item("Assignments",R.drawable.assignment);
+				GridViewItem item=new GridViewItem("Assignment",R.drawable.assignment);
 				list.add(item);
 			}
 			if(s.equals("Self"))
 			{
-				Item item=new Item("Self",R.drawable.self);
+				GridViewItem item=new GridViewItem("Self",R.drawable.self);
 				list.add(item);
 			}
 			if(s.equals("Notifications"))
 			{
-				Item item=new Item("Notifications",R.drawable.notification);
+				GridViewItem item=new GridViewItem("Notifications",R.drawable.notification);
 				list.add(item);
 			}
 			if(s.equals("Calender"))
 			{
-				Item item=new Item("Calender",R.drawable.calender);
+				GridViewItem item=new GridViewItem("Calender",R.drawable.calender);
 				list.add(item);
 			}
 			if(s.equals("Events"))
 			{
-				Item item=new Item("Events",R.drawable.event);
+				GridViewItem item=new GridViewItem("Events",R.drawable.event);
 				list.add(item);
 			}
 			if(s.equals("About Us"))
 			{
-				Item item=new Item("About Us",R.drawable.about);
+				GridViewItem item=new GridViewItem("About Us",R.drawable.about);
 				list.add(item);
 			}
 			
@@ -87,7 +87,7 @@ public class MainActivity extends ActionBarActivity {
 	private void initialise() {
 		// TODO Auto-generated method stub
 		gridViewList=(GridView) findViewById(R.id.gvList);
-		list=new ArrayList<Item>();
+		list=new ArrayList<GridViewItem>();
 		
 	}
 

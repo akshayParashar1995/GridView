@@ -17,7 +17,7 @@ import android.widget.TextView;
 public class GridAdapter extends ArrayAdapter  {
 
 	public GridAdapter(Context context, int resource, int textViewResourceId,
-			ArrayList<Item> list ) {
+			ArrayList<GridViewItem> list ) {
 		super(context, resource, textViewResourceId,list);
 		// TODO Auto-generated constructor stub
 		this.context=context;
@@ -27,7 +27,7 @@ public class GridAdapter extends ArrayAdapter  {
 	private String[] gridItemValues;
 	ImageView ivImage;
 	TextView tvText;
-	ArrayList<Item> list;
+	ArrayList<GridViewItem> list;
 	View gridView;
 	LayoutInflater inflator;
 	
@@ -43,7 +43,7 @@ public class GridAdapter extends ArrayAdapter  {
 			gridView=new View(context);
 			gridView=inflator.inflate(R.layout.custom_grid_view, null);
 			initialise();
-			Item gotItem=(Item) this.getItem(position);
+			GridViewItem gotItem=(GridViewItem) this.getItem(position);
 			tvText.setText(gotItem.itemName);
 			ivImage.setImageResource(gotItem.imagePath);
 			

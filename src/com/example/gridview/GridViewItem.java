@@ -1,10 +1,10 @@
 package com.example.gridview;
 
-public class Item {
+public class GridViewItem {
 
 	String itemName;
 	int imagePath;
-	Item(String name,int path)
+	GridViewItem(String name,int path)
 	{
 		this.itemName=name;
 		this.imagePath=path;
